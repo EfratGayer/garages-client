@@ -21,6 +21,25 @@ export class AppComponent implements OnInit, OnDestroy {
 
   errors: string[] = [];
 
+  columnNames: { [key in keyof Garage]: string } = {
+    _id: 'ID',
+    originalId: 'Original ID',
+    mispar_mosah: 'Garage Number',
+    shem_mosah: 'Garage Name',
+    cod_sug_mosah: 'Garage Type Code',
+    sug_mosah: 'Garage Type',
+    ktovet: 'Address',
+    yishuv: 'City',
+    telephone: 'Telephone',
+    mikud: 'Postal Code',
+    cod_miktzoa: 'Profession Code',
+    miktzoa: 'Profession',
+    menahel_miktzoa: 'Profession Manager',
+    rasham_havarot: 'Company Registry',
+    TESTIME: 'Test Time'
+  };
+  
+
   displayedColumns: (keyof Garage)[] = [
     '_id',
     'originalId',
